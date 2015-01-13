@@ -1,0 +1,17 @@
+<h1>Here are your triangle's results:</h1>
+<h5>Side A: <%= @a %></h5>
+<h5>Side B: <%= @b %></h5>
+<h5>Side C: <%= @c %></h5>
+<h5>Triangle Type:
+<% if @triangle.triangle?() %>
+  <% if @triangle.type() == "Equilateral" %>
+    Equilateral
+  <% elsif @triangle.type() == "Scalene" %>
+    Scalene
+  <% else %>
+    Isosceles
+  <% end %>
+<% else %>
+  It is not a triangle.
+<% end %>
+</h5>
